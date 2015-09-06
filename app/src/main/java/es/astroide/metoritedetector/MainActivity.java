@@ -24,7 +24,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public void onClick(View vista) {
 
         if(vista.getId()==findViewById(R.id.btnStart).getId()){
-            Intent i = new Intent(this,MedicionesActivity.class);
+            Intent i = new Intent(this,MedirActivity.class);
             startActivity(i);
         }
     }
