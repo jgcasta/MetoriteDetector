@@ -14,6 +14,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class MedirActivity extends ActionBarActivity implements View.OnClickListener, SensorEventListener{
@@ -22,28 +23,30 @@ public class MedirActivity extends ActionBarActivity implements View.OnClickList
     //Sensor accelerometer;
     Sensor magnetometer;
     private float   mMagneticValues[] = new float[3];
-    private TextView txtMeasure;
+    private TextView txtX;
+    private TextView txtY;
+    private TextView txtZ;
+    private TextView txtTotal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medir);
 
-        txtMeasure = (TextView) findViewById(R.id.txtMeasure);
+        txtX = (TextView) findViewById(R.id.txtX);
+        txtY = (TextView) findViewById(R.id.txtY);
+        txtZ = (TextView) findViewById(R.id.txtZ);
+        txtTotal = (TextView) findViewById(R.id.txtTotal);
 
         View boton = findViewById(R.id.btnMeasure);
         boton.setOnClickListener(this);
 
-        //mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
-        //accelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        //magnetometer = mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
-        //mSensorManager.registerListener(this, mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD), SensorManager.SENSOR_DELAY_FASTEST);
     }
 
     public void onClick(View vista) {
 
         if(vista.getId()==findViewById(R.id.btnMeasure).getId()){
-            Alerta("Estoy dentro");
+            Alerta("Sending data....");
 
         }
     }
@@ -107,9 +110,18 @@ public class MedirActivity extends ActionBarActivity implements View.OnClickList
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        this.txtMeasure.setText("X = " + event.values[0]);
 
+        float tmpTotal;
 
+        this.txtX.setText(String.valueOf(event.values[0]));
+        this.txtY.setText(String.valueOf(event.values[1]));
+        this.txtZ.setText(String.valueOf(event.values[2]));
+
+        tmpTotal = (event.values[0] * event.values[0]) + (event.values[1] * event.values[1]) + (event.values[2] * event.values[2]);
+        double total = Math.sqrt((double) tmpTotal);
+        DecimalFormat formateador = new DecimalFormat("######.######");
+
+        this.txtTotal.setText(formateador.format (total));
 
     }
 

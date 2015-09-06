@@ -10,27 +10,144 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Measure"
+        android:text="X"
         android:id="@+id/txt1"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="42dp" />
+        android:layout_marginTop="83dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Now"
+        android:id="@+id/btnMeasure"
+        android:layout_marginBottom="29dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/editText" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/txtMeasure"
-        android:layout_alignTop="@+id/txt1"
-        android:layout_centerHorizontal="true"
-        android:textSize="@dimen/abc_text_size_body_1_material" />
+        android:text="Y"
+        android:id="@+id/txt2"
+        android:layout_below="@+id/txt1"
+        android:layout_alignParentStart="true" />
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Measure Now"
-        android:id="@+id/btnMeasure"
-        android:layout_marginTop="44dp"
-        android:layout_below="@+id/txt1"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Z"
+        android:id="@+id/txt3"
+        android:layout_below="@+id/txt2"
+        android:layout_alignEnd="@+id/txt1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="           "
+        android:id="@+id/txtX"
+        android:layout_alignTop="@+id/txt1"
+        android:layout_toEndOf="@+id/txt1"
+        android:layout_marginStart="11dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="           "
+        android:id="@+id/txtY"
+        android:layout_below="@+id/txtX"
+        android:layout_alignStart="@+id/txtX" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="           "
+        android:id="@+id/txtZ"
+        android:layout_below="@+id/txtY"
+        android:layout_alignStart="@+id/txtY" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Total"
+        android:id="@+id/txt4"
+        android:layout_below="@+id/txtZ"
+        android:layout_alignStart="@+id/txtZ"
+        android:layout_marginTop="39dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="           "
+        android:id="@+id/txtTotal"
+        android:layout_alignTop="@+id/txt4"
+        android:layout_toEndOf="@+id/txtZ" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Campo 1"
+        android:id="@+id/textView"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/txt4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Campo 2"
+        android:id="@+id/textView2"
+        android:layout_alignBottom="@+id/editText3"
+        android:layout_alignStart="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Campo 3"
+        android:id="@+id/textView3"
+        android:layout_alignBottom="@+id/editText4"
+        android:layout_alignStart="@+id/textView2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:width="100dp"
+        android:layout_alignBottom="@+id/textView"
         android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText3"
+        android:width="100dp"
+        android:layout_below="@+id/editText"
+        android:layout_alignStart="@+id/editText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText4"
+        android:width="100dp"
+        android:layout_below="@+id/editText3"
+        android:layout_alignStart="@+id/editText3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Measures"
+        android:id="@+id/textView4"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/editText" />
+
 </RelativeLayout>
