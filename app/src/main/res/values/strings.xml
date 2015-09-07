@@ -1,6 +1,16 @@
 <resources>
-    <string name="app_name">MetoriteDetector</string>
+    <string name="app_name">Meteorite Detection</string>
+
+    <string name="medicion_titulo">Measure</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="descrip_app">Aplicación para identificación de meteoritos mediante de medidas de intensidad magnética.\n\nDepartamento de Astrofísica y \nCC. de la Atmósfera</string>
+
+    <string name="descrip_uso">This app will read magnetic values from your test and ask you for some characteristics. Then they will be send to the central database</string>
+    <string name="title_activity_medir">Measure</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="title_activity_foto">Take a Photo</string>
+
+
 </resources>
