@@ -58,7 +58,7 @@ public class MedirActivity extends ActionBarActivity implements View.OnClickList
         alerta.setTitle("Alerta");
         alerta.setMessage(texto);
         alerta.setButton("OK", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
+            public void onClick(DialogInterface dialog, int which)    {
 
             }
         });
